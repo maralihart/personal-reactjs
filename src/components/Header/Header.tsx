@@ -1,5 +1,7 @@
 import React from "react";
+import {Row, Col} from 'react-bootstrap';
 import JobList from "./JobList";
+import Twitch from './Twitch';
 
 function Header() {
 
@@ -7,17 +9,19 @@ function Header() {
   const previously: string[] = ["Microsoft Software Engineer Intern", "Girls Who Code at Founding President ", "Kode With Klossy Instructor Assistant"];
 
   return (
-    <div>
-      {/* Twitch Alert */}
-      <h1>Mara.</h1>
-      <h2>software developer</h2>
-      {/* Social Media */}
-      <JobList title="Currently" jobList={currently} />
-      <JobList title="Previously" jobList={previously} />
-      {/* Currently */}
-      {/* Presently */}
-      {/* Transparent Photo Of Me */}
-    </div>
+    <Row>
+      <Col>
+        <Twitch />
+        <h1>Mara.</h1>
+        <h2>software developer</h2>
+        {/* Social Media */}
+        <JobList title="Currently" jobList={currently} />
+        <JobList title="Previously" jobList={previously} />
+      </Col>
+      <Col>
+        {/* Transparent Photo Of Me */}
+      </Col>
+    </Row>
   );
 }
 

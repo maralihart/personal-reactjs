@@ -4,10 +4,10 @@ import {Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <Container>
+    <div className="mx-md-5 mx-sm-2">
       <Header />
       <About />
-    </Container>
+    </div>
   );
 }
 
