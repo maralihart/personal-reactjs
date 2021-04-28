@@ -1,3 +1,6 @@
+import React from 'react';
+import { isMobile } from 'react-device-detect';
+
 interface Props {
   title: string;
   jobList: string[];
@@ -5,8 +8,8 @@ interface Props {
 
 function JobList(props: Props) {
   return (
-    <div className="mb-5">
-      <p><strong>{props.title},</strong></p>
+    <div className="job mt-5">
+      <p className={isMobile ? "mb-2" : "mb-3"}><strong>{props.title},</strong></p>
       <ul>
         {props.jobList.map((item, index) => <li key={index}><p>{item}</p></li>)}
       </ul>

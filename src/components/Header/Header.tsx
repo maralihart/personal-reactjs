@@ -4,7 +4,9 @@ import JobList from "./JobList";
 import Twitch from './Twitch';
 import GitHub from './github-icon.svg';
 import LinkedIn from './linkedin-icon.svg';
-import Email from './email-icon.svg';
+import StickerMe from './sticker mara hart.png';
+import { isMobile } from 'react-device-detect';
+import { ChevronsDown, DownloadCloud } from 'react-feather';
 
 function Header() {
 
@@ -12,31 +14,39 @@ function Header() {
   const previously: string[] = ["Microsoft Software Engineer Intern", "Girls Who Code at Founding President ", "Kode With Klossy Instructor Assistant"];
 
   return (
-    <Row className="mb-3">
-      <Col>
-        <Twitch />
-        <h1>Mara.</h1>
-        <h2 className="mb-5">software developer</h2>
-        <Col xs={11} sm={5} className="mb-5">
-          <Row className="justify-content-between mb-4">
-            <a href="https://github.com/maralihart" target="_blank" rel="noopener noreferrer">
-              <img src={GitHub} alt="GitHub" />
-            </a>
-            <a href="https://linkedin.com/in/maralihart" target="_blank" rel="noopener noreferrer">
-              <img src={LinkedIn} alt="LinkedIn" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={Email} alt="Email" />
-            </a>
-          </Row>
+    <>
+      <Twitch />
+      <Row>
+        <Col xs={12} sm={6}>
+          <h1>Mara.</h1>
+          <h2>software developer</h2>
+          <Col>
+            <Row className="mt-3">
+              <a className="mr-5" href="https://github.com/maralihart" target="_blank" rel="noopener noreferrer">
+                <img src={GitHub} alt="GitHub" />
+              </a>
+              <a className="mr-5" href="https://linkedin.com/in/maralihart" target="_blank" rel="noopener noreferrer">
+                <img src={LinkedIn} alt="LinkedIn" />
+              </a>
+              <a className="mr-5" href="https://drive.google.com/file/d/1j55uUwp-R0fGbf1Tz1MSkYywvyZQSQIe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <DownloadCloud color="white" size={50} />
+              </a>
+            </Row>
+          </Col>
+          <JobList title="Currently" jobList={currently} />
+          <JobList title="Previously" jobList={previously} />
         </Col>
-        <JobList title="Currently" jobList={currently} />
-        <JobList title="Previously" jobList={previously} />
-      </Col>
-      <Col>
-        {/* Transparent Photo Of Me */}
-      </Col>
-    </Row>
+
+        {!isMobile && <Col xs={6} className="justify-content-center">
+          <img src={StickerMe} alt="Sticker version of Mara, provided by MLH" width="75%" />
+        </Col>}
+      </Row>
+
+      <Row className="justify-content-center mb-3 mt-3">
+        <a href="#about"><ChevronsDown color="white" size={48}/></a>
+      </Row>
+      {/* scroll down */}
+    </>
   );
 }
 

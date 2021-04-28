@@ -1,10 +1,10 @@
 import About from './components/About/About';
 import Header from './components/Header/Header';
-import {Container} from 'react-bootstrap';
+import { isMobile } from 'react-device-detect';
 
 function App() {
   return (
-    <div className="mx-md-5 mx-sm-2">
+    <div className={isMobile ? "mx-3" : "mx-4"}>
       <Header />
       <About />
     </div>
