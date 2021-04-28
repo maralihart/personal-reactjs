@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import Headshot from './headshot.png';
+import Headshot from '../../assets/headshot.png';
 import { isMobile } from 'react-device-detect';
 import { DownloadCloud } from 'react-feather';
 

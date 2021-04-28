@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import TwitchIcon from './twitch-logo.png';
+import TwitchIcon from '../../assets/twitch-logo.png';
 
 function Twitch() {
   return (

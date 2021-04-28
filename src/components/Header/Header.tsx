@@ -2,9 +2,9 @@ import React from "react";
 import {Row, Col} from 'react-bootstrap';
 import JobList from "./JobList";
 import Twitch from './Twitch';
-import GitHub from './github-icon.svg';
-import LinkedIn from './linkedin-icon.svg';
-import StickerMe from './sticker mara hart.png';
+import GitHub from '../../assets/github-icon.svg';
+import LinkedIn from '../../assets/linkedin-icon.svg';
+import StickerMe from '../../assets/sticker mara hart.png';
 import { isMobile } from 'react-device-detect';
 import { ChevronsDown, DownloadCloud } from 'react-feather';
 
