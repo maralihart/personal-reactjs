@@ -5,7 +5,7 @@ interface Props {
 
 function JobList(props: Props) {
   return (
-    <div>
+    <div className="mb-5">
       <p><strong>{props.title},</strong></p>
       <ul>
         {props.jobList.map((item, index) => <li key={index}><p>{item}</p></li>)}
