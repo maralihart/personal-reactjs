@@ -73,7 +73,7 @@ function Links() {
       <Col>
         {links.map((item) => 
           <Row className="mt-3 mx-2" key={item.id}>
-            <Button className="py-3 button full-width" href={item.link} block>{item.title}</Button>
+            <Button className="py-3 button full-width" href={item.link} target="_ blank" block>{item.title}</Button>
           </Row>)}
       </Col>
     </Col>
