@@ -41,10 +41,8 @@ function Links() {
           width="125px" height="125px" 
           alt="Mara drinking juice at brunch"/>
       </Row>
-      <Row className="justify-content-center">
-        <h2>@MaraDrinksMilk</h2>
-        <p className="text-center">👋 Hi, I'm Mara!</p>
-      </Row>
+      <h2 className="text-center">@MaraDrinksMilk</h2>
+      <p className="text-center">👋 Hi, I'm Mara!</p>
       <Row className="justify-content-center my-2 faded-bg py-3 rounded">
         <Col>
           <a href="https://twitch.tv/MaraDrinksMilk" target="_blank" rel="noreferrer noopener">
@@ -75,7 +73,7 @@ function Links() {
       <Col>
         {links.map((item) => 
           <Row className="mt-3 mx-2" key={item.id}>
-            <Button className="py-3 button" href={item.link} block>{item.title}</Button>
+            <Button className="py-3 button full-width" href={item.link} block>{item.title}</Button>
           </Row>)}
       </Col>
     </Col>

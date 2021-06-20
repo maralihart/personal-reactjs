@@ -86,7 +86,10 @@ p {
 
 .faded-bg {
   background-color: rgba(209, 126, 109, 0.3);
-  
+}
+
+.full-width {
+  width: 100%;
 }
 @media only screen and (max-device-width: 480px) {
   h1 {
