@@ -79,6 +79,15 @@ p {
 .live:hover {
   text-decoration: none;
 }
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.faded-bg {
+  background-color: rgba(209, 126, 109, 0.3);
+  
+}
 @media only screen and (max-device-width: 480px) {
   h1 {
     font-size: 64px;
