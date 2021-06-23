@@ -26,7 +26,7 @@ function Links() {
           }
         `
       );
-      setLinks(links);
+      setLinks(links.reverse());
     };
 
     fetchLinks();
@@ -43,7 +43,7 @@ function Links() {
       </Row>
       <h2 className="text-center">@MaraDrinksMilk</h2>
       <p className="text-center">👋 Hi, I'm Mara!</p>
-      <Row className="justify-content-center my-2 faded-bg py-3 rounded">
+      <Row className="justify-content-around my-2 faded-bg py-3 rounded">
         <Col>
           <a href="https://twitch.tv/MaraDrinksMilk" target="_blank" rel="noreferrer noopener">
             <img src={TwitchIcon} width="28px" alt="Twitch logo"/>
@@ -72,8 +72,8 @@ function Links() {
       </Row>
       <Col>
         {links.map((item) => 
-          <Row className="mt-3 mx-2" key={item.id}>
-            <Button className="py-3 button full-width" href={item.link} target="_ blank" block>{item.title}</Button>
+          <Row className="mt-3 mx-0" key={item.id}>
+            <Button className="py-3 button full-width smaller-text" href={item.link} target="_ blank" block>{item.title}</Button>
           </Row>)}
       </Col>
     </Col>
