@@ -10,8 +10,8 @@ import { ChevronsDown, DownloadCloud } from 'react-feather';
 
 function Header() {
 
-  const currently: string[] = ["Major League Hacking Coach", "Girls Who Code at UVA Technical Lead", "CS1501 Teaching Assistant", "Twitch Content Creator"];
-  const previously: string[] = ["Microsoft Software Engineer Intern", "Girls Who Code at Founding President ", "Kode With Klossy Instructor Assistant"];
+  const currently: string[] = ["Major League Hacking Coach", "Returning Microsoft Software Engineer Intern", "Twitch Content Creator"];
+  const previously: string[] = ["Girls Who Code at Founding President ", "Kode With Klossy Instructor Assistant", "Elevate Meal Plan Mobile App Development Intern"];
 
   return (
     <>
