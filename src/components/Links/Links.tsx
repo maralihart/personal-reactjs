@@ -4,7 +4,7 @@ import { Row, Col, Button } from 'react-bootstrap';
 import pfp from '../../assets/brunch_pic.jpeg';
 import TwitterIcon from '../../assets/twitter-logo.svg';
 import TwitchIcon from '../../assets/twitch-logo.png';
-import DiscordIcon from '../../assets/discord-logo-blurple.svg';
+// import DiscordIcon from '../../assets/discord-logo-blurple.svg';
 import TikTokIcon from '../../assets/tiktok-logo.png';
 import InstagramIcon from '../../assets/instagram-logo.png';
 
