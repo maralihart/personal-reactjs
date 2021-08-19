@@ -71,6 +71,9 @@ function Links() {
         </Col>
       </Row>
       <Col>
+        <Row className="mt-3 mx-0">
+          <Button className="py-3 button full-width smaller-text" href="https://discord.gg/evMxtJ8nmA" target="_ blank" block>muslimah discord server</Button>
+        </Row>
         {links.map((item) =>
           <Row className="mt-3 mx-0" key={item.id}>
             <Button className="py-3 button full-width smaller-text" href={item.link} target="_ blank" block>{item.title}</Button>
