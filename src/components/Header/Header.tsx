@@ -10,13 +10,13 @@ import { ChevronsDown, DownloadCloud } from 'react-feather';
 
 function Header() {
 
-  const currently: string[] = ["Major League Hacking Coach", "Returning Microsoft Software Engineer Intern", "Twitch Content Creator"];
-  const previously: string[] = ["Girls Who Code at Founding President ", "Kode With Klossy Instructor Assistant", "Elevate Meal Plan Mobile App Development Intern"];
+  const currently: string[] = ["Major League Hacking Coach", "Intel Design Automation Intern"];
+  const previously: string[] = ["Girls Who Code at Founding President ", "2x Microsoft Software Engineer Intern", "Elevate Meal Plan Mobile App Development Intern"];
 
   return (
     <>
-      <Twitch />
-      <Row>
+      {/* <Twitch /> */}
+      <Row className="my-5 py-4">
         <Col xs={12} sm={6}>
           <h1>Mara.</h1>
           <h2>software developer</h2>
