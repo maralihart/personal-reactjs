@@ -1,7 +1,7 @@
 import React from "react";
 import {Row, Col} from 'react-bootstrap';
 import JobList from "./JobList";
-import Twitch from './Twitch';
+// import Twitch from './Twitch';
 import GitHub from '../../assets/github-icon.svg';
 import LinkedIn from '../../assets/linkedin-icon.svg';
 import StickerMe from '../../assets/sticker mara hart.png';
