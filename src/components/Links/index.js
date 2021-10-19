@@ -8,7 +8,7 @@ import TwitchIcon from '../../assets/twitch-logo.png';
 import TikTokIcon from '../../assets/tiktok-logo.png';
 import InstagramIcon from '../../assets/instagram-logo.png';
 
-function Links() {
+export default function Links() {
 
   const [links, setLinks] = useState([{ 'title': '', 'link': '', 'id': '' }]);
 
@@ -82,5 +82,3 @@ function Links() {
     </Col>
   );
 }
-
-export default Links;
