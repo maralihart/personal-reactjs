@@ -1,7 +1,7 @@
 :root {
-  --primary: #E4B3A9;
-  --secondary: #1A2645;
-  --tertiary: #D17E6D;
+  --primary: #7A4C2C;
+  --secondary: #718F94;
+  --tertiary: #F4F4F8;
 }
 
 body {
@@ -20,4 +20,12 @@ code {
 
 img {
   object-fit: cover;
+}
+
+a {
+  color: var(--tertiary);
+}
+
+a:hover {
+  color: var(--secondary);
 }

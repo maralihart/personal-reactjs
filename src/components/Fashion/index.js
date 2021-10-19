@@ -11,11 +11,11 @@ export default function Fashion () {
   return (
     <Row>
       <Left>
-        <Home />
-        <About />
-        <Looks />
-        <Faves />
-        <Collab />
+        <Home id="home"/>
+        <About id="about"/>
+        <Looks id="looks"/>
+        <Faves id="faves"/>
+        <Collab id="collab"/>
       </Left>
       <Right>
         <Navbar />

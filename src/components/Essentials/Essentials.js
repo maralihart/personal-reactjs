@@ -9,6 +9,29 @@ export function Row(props) {
   );
 }
 
+export function Column(props) {
+  return (
+    <div style={{ flexDirection: 'column' }}>
+      { props.children }
+    </div>
+  );
+}
+
+export function Card(props) {
+  return (
+    <div style={{ 
+      background: props.background, 
+      width: props.width, 
+      height: props.height,
+      justifyContent: 'center',
+      padding: '10px 25px',
+      lineheight: '6px',
+      }}>
+      {props.children}
+    </div>
+  )
+}
+
 export function Text(props) {
 
   const h1 = {
@@ -16,7 +39,6 @@ export function Text(props) {
     weight: 900,
     size: 48,
     letter_spacing: "15%",
-    color: "black",
     text_transform: "lowercase",
   }
 
@@ -26,7 +48,6 @@ export function Text(props) {
     weight: 700,
     size: 36,
     letter_spacing: "10%",
-    color: "black"
   }
 
   const h3 = {
@@ -34,7 +55,6 @@ export function Text(props) {
     weight: 700,
     size: 28,
     letter_spacing: "15%",
-    color: "black",
     text_transform: "lowercase",
   }
 
@@ -43,7 +63,6 @@ export function Text(props) {
     weight: 400,
     size: 18,
     letter_spacing: "15%",
-    color: "black"
   }
 
   const mobile_h1 = {
@@ -51,7 +70,6 @@ export function Text(props) {
     weight: 900,
     size: 32,
     letter_spacing: "15%",
-    color: "black",
     text_transform: "lowercase",
   }
 
@@ -61,7 +79,6 @@ export function Text(props) {
     weight: 700,
     size: 24,
     letter_spacing: "15%",
-    color: "black"
   }
 
   const mobile_h3 = {
@@ -69,7 +86,6 @@ export function Text(props) {
     weight: 700,
     size: 18,
     letter_spacing: "15%",
-    color: "black",
     text_transform: "lowercase",
   }
 
@@ -78,7 +94,6 @@ export function Text(props) {
     weight: 400,
     size: 14,
     letter_spacing: "15%",
-    color: "black"
   }
 
   let mode;
@@ -100,11 +115,12 @@ export function Text(props) {
   const Text = styled.p`
     font-size: ${mode.size + "px"};
     font-weight: ${props.bold ? 700 : mode.weight};
-    font-color: ${props.color ? props.color : mode.color};
+    font-color: ${props.color ? props.color : "black"};
     letter-spacing: ${mode.letter_spacing};
     font-family: ${mode.font};
     text-transform: ${mode.text_transform && mode.text_transform};
     text-align: ${props.center && "center"};
+    margin-bottom: ${props.p && '5px'};
   `
   // font-family: ${mode.font};
 
@@ -130,6 +146,12 @@ export function Left(props) {
 export function Right(props) {
   const Right = styled.div`
     width: 14%;
+    position: fixed;
+    display: flex;
+    right: 5%;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
   `;
 
   return (
