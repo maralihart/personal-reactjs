@@ -115,6 +115,30 @@ export function Text(props) {
   );
 }
 
+export function Left(props) {
+  const Left = styled.div`
+    width: 75%;
+  `;
+
+  return (
+    <Left>
+      {props.children}
+    </Left>
+  )
+}
+
+export function Right(props) {
+  const Right = styled.div`
+    width: 14%;
+  `;
+
+  return (
+    <Right>
+      {props.children}
+    </Right>
+  )
+}
+
 export const TikTok = "https://tiktok.com/@maradrinksmilk"
 export const Instagram = "https://instagram.com/mi.lk"
 export const Email = "mailto:pr@mara.fyi"

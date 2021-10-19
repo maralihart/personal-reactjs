@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 export default function Navbar () {
   const Navbar = styled.div`
-    width: 10%;
-    justify-content: end;
-    position: fixed;
-    margin-top: 5%;
+    background-color: 'black';
+    color: 'grey';
   `;
   return (
-    // <Navbar>
+    <Navbar>
       <Text h1>Navbar</Text>
-    // </Navbar>
+    </Navbar>
   )
 }
