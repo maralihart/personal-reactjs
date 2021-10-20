@@ -5,7 +5,7 @@ export function Card(props) {
       width: props.width, 
       height: props.height,
       justifyContent: 'center',
-      padding: '10px 15px',
+      padding: props.noPadding ? 0 : '10px 15px',
       lineheight: '6px',
       }}>
       {props.children}
