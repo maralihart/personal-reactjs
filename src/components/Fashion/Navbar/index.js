@@ -1,5 +1,5 @@
-import { Card, Column, secondary, Text } from '../../Essentials/Essentials'
-import styled from 'styled-components';
+import { Card, secondary } from '../../Essentials/Essentials'
+import { Col } from 'react-bootstrap'
 
 export default function Navbar (props) {
   return (
@@ -16,14 +16,14 @@ export default function Navbar (props) {
         height: "50%",
       }}>
       <Card background={secondary} width="150px" height="200px">
-        <Column>
+        <Col>
           <p><a href="#home">home</a></p>
           <p><a href="#about">about</a></p>
           <p><a href="#looks">looks</a></p>
           <p><a href="#faves">faves</a></p>
           <p><a href="#collab">collab</a></p>
           <p><a href="/tech">tech</a></p>
-        </Column>
+        </Col>
       </Card>
     </div>
   )

@@ -1,19 +1,3 @@
-export function Row(props) {
-  return (
-    <div style={{ flexDirection: 'row' }}>
-      { props.children }
-    </div>
-  );
-}
-
-export function Column(props) {
-  return (
-    <div style={{ flexDirection: 'column' }}>
-      { props.children }
-    </div>
-  );
-}
-
 export function Card(props) {
   return (
     <div style={{ 
@@ -21,7 +5,7 @@ export function Card(props) {
       width: props.width, 
       height: props.height,
       justifyContent: 'center',
-      padding: '10px 25px',
+      padding: '10px 15px',
       lineheight: '6px',
       }}>
       {props.children}

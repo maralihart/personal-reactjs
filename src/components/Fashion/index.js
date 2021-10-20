@@ -2,7 +2,7 @@ import Faves from './Faves'
 import Home from './Home'
 import Looks from './Looks'
 import Collab from './Collab'
-import { Left, Right } from '../Essentials/Essentials'
+import { Left } from '../Essentials/Essentials'
 import About from './About'
 import Navbar from './Navbar'
 import { Row } from 'react-bootstrap'
@@ -17,9 +17,7 @@ export default function Fashion () {
         <Faves id="faves"/>
         <Collab id="collab"/>
       </Left>
-      <Right>
-        <Navbar />
-      </Right>
+      <Navbar />
     </Row>
   )
 }
