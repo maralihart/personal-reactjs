@@ -1,7 +1,8 @@
 :root {
   --primary: #7A4C2C;
   --secondary: #718F94;
-  --tertiary: #F4F4F8;
+  --black: #373737;
+  --white: #F4F4F8;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: '#373737';
 }
 
 code {
@@ -22,10 +24,62 @@ img {
   object-fit: cover;
 }
 
-a {
-  color: var(--tertiary);
+.navbar a {
+  color: var(--white);
 }
 
-a:hover {
+a {
   color: var(--secondary);
+}
+
+h1 {
+  font-family: "Spartan";
+  font-weight: 900;
+  font-size: 48;
+  letter-spacing: 5px;
+  text-transform: lowercase;
+  color: var(--primary);
+  margin: 0;
+}
+
+h2 {
+  font-family: "Source Sans Pro";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36;
+  letter-spacing: 2px;
+  color: var(--black);
+}
+
+h3 {
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 28;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  color: var(--black);
+}
+
+p {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 18;
+  letter-spacing: 1px;
+  color: var(--black);
+  margin: 5px;
+}
+
+@media (max-width: 770px) {
+  h1 {
+    font-size: 32;
+  }
+  h2 {
+    font-size: 24;
+  }
+  h3 {
+    font-size: 18;
+  }
+  p {
+    font-size: 14;
+  }
 }

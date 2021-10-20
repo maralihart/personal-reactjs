@@ -1,12 +1,12 @@
-import { Text } from '../../Essentials/Essentials'
+import { primary, Text } from '../../Essentials/Essentials'
 
 export default function Home (props) {
   return (
     <div id={props.id}>
-      <Text h1>mara hart</Text>
-      <Text h2>modest fashion content creator</Text>
+      <h1 color={primary}>mara hart</h1>
+      <h2>modest fashion content creator</h2>
       <img width="80%" height="500px" src="https://images.pexels.com/photos/841303/pexels-photo-841303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Probably some kind of look"/>
-      <Text h3>I'll put a tagline here</Text>
+      <h3>I'll put a tagline here</h3>
     </div>
   )
 }
