@@ -70,8 +70,9 @@ p {
   margin: 5px;
 }
 
-.center {
+.header {
   text-align: center;
+  padding-top: 30px;
 }
 
 .full-center {
