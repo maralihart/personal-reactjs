@@ -10,6 +10,7 @@ export default function Faves (props) {
       brand: "Cat Place", 
       product: "Kitten", 
       description: "I really like this cat because it's cat", 
+      link: "#",
       discount: "MARA"
     },{
       img: "https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
@@ -17,6 +18,7 @@ export default function Faves (props) {
       brand: "Cat Place", 
       product: "Kitten", 
       description: "I really like this cat because it's cat", 
+      link: "#",
     },
     ])
   return (
@@ -24,13 +26,8 @@ export default function Faves (props) {
       <h2 className="header" style={{ marginBottom: "20px" }}>Faves</h2>
       { favorites.map((item, index) => 
         <Favorite 
-          img={item.img} 
-          alt={item.alt} 
+          item={item}
           key={index} 
-          brand={item.brand} 
-          product={item.product} 
-          description={item.description} 
-          discount={item.discount} 
           orientation={index % 2}/> ) }
     </div>
   )

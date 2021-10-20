@@ -33,6 +33,11 @@ a {
   color: var(--secondary);
 }
 
+.active {
+  font-weight: 700;
+  color: (--primary);
+}
+
 h1 {
   font-family: "Spartan";
   font-weight: 900;

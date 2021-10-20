@@ -15,7 +15,7 @@ export function Card(props) {
 
 export function Left(props) {
   return (
-    <div style={{ width: "75%" }}>
+    <div style={{ width: "80%" }}>
       {props.children}
     </div>
   )

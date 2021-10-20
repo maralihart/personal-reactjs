@@ -11,7 +11,7 @@ export default function Home (props) {
         <div style={{
           position: "absolute",
           right: "25%",
-          bottom: "40%"
+          top: "30%"
         }}>
           <Card 
             width="300px" 
