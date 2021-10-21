@@ -7,6 +7,7 @@ export function Card(props) {
       justifyContent: 'center',
       padding: props.noPadding ? 0 : '10px 15px',
       lineheight: '6px',
+      display: 'block'
       }}>
       {props.children}
     </div>
@@ -18,6 +19,24 @@ export function Left(props) {
     <div style={{ width: "80%" }}>
       {props.children}
     </div>
+  )
+}
+
+export function LinkButton(props) {
+  return (
+    <a href={props.link} target="_blank" rel="noreferrer">
+      <div style={{ 
+        background: primary, 
+        width: "100%", 
+        height: "50px",
+        marginTop: "10px",
+        justifyContent: 'center',
+        alignItems: 'center',
+        }}>
+          {/* TODO: Fix padding */}
+        <p className="text-center white">{props.children}</p>
+      </div>
+    </a>
   )
 }
 
