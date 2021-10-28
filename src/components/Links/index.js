@@ -1,6 +1,7 @@
 import request from 'graphql-request';
 import { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { isMobile } from 'react-device-detect';
 import pfp from '../../assets/profile.jpg';
 import TikTokIcon from '../../assets/tiktok-logo.png';
 import InstagramIcon from '../../assets/instagram-logo.png';
@@ -37,7 +38,7 @@ export default function Links() {
         margin: "20px 0 7px 0"
       }}>
         <a href={Instagram} target="_blank" rel="noreferrer noopener">
-          <img src={InstagramIcon} width="40px" alt="Instagram logo" />
+          <img src={InstagramIcon} width={isMobile ? "40px" : "80px"} alt="Instagram logo" />
         </a>
         <img
           className="circle"
@@ -45,7 +46,7 @@ export default function Links() {
           width="125px" height="125px"
           alt="Mara drinking juice at brunch" />
         <a href={TikTok} target="_blank" rel="noreferrer noopener">
-          <img src={TikTokIcon} width="35px" alt="Tiktok logo" />
+          <img src={TikTokIcon} width={isMobile ? "35px" : "75px"} alt="Tiktok logo" />
         </a>
       </Row>
       <h1 className="text-center">mara</h1>
