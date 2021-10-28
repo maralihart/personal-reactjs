@@ -1,3 +1,5 @@
+import FeatherIcon from 'feather-icons-react';
+
 export function Card(props) {
   return (
     <div style={{ 
@@ -32,11 +34,19 @@ export function LinkButton(props) {
         marginTop: "10px",
         justifyContent: 'center',
         alignItems: 'center',
+        padding: '5px'
         }}>
-          {/* TODO: Fix padding */}
         <p className="text-center white">{props.children}</p>
       </div>
     </a>
+  )
+}
+
+export function LinkDropdownButton(props) {
+  return (
+    <LinkButton link={props.link}>
+      {props.children} 
+    </LinkButton>
   )
 }
 
