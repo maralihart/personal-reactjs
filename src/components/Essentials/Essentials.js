@@ -27,15 +27,7 @@ export function Left(props) {
 export function LinkButton(props) {
   return (
     <a href={props.link} target="_blank" rel="noreferrer">
-      <div style={{ 
-        background: primary, 
-        width: "100%", 
-        height: "50px",
-        marginTop: "10px",
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '5px'
-        }}>
+      <div className="link d-flex align-items-center justify-content-center" >
         <p className="text-center white">{props.children}</p>
       </div>
     </a>
