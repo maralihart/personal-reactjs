@@ -49,7 +49,7 @@ export default function Links() {
           <img src={TikTokIcon} width={isMobile ? "35px" : "75px"} alt="Tiktok logo" />
         </a>
       </Row>
-      <h1 className="text-center">mara</h1>
+      <h1 className="text-center" style={{ fontFamily: "Source Sans Pro", textTransform: "uppercase" }}>mara</h1>
       {/* <h2 className="text-center">assalamu alaiykum</h2> */}
       <Row style={{ justifyContent: "space-evenly", alignItems: "center" }}>
         <p className="text-center">collab: pr@mara.fyi</p>
