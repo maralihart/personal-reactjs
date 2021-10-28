@@ -7,11 +7,15 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+        {/* TODO: Update routes when rest of site is built out
         <Route exact path="/links">
           <Links/>
         </Route>
         <Route path="/">
           <Fashion />
+        </Route> */}
+        <Route path="/">
+          <Links/>
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,7 +1,7 @@
 import request from 'graphql-request';
 import { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import pfp from '../../assets/brunch_pic.jpeg';
+import pfp from '../../assets/profile.jpg';
 import TikTokIcon from '../../assets/tiktok-logo.png';
 import InstagramIcon from '../../assets/instagram-logo.png';
 import { Instagram, TikTok, LinkButton, LinkDropdownButton, secondary } from '../Essentials/Essentials';
