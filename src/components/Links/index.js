@@ -62,6 +62,7 @@ export default function Links() {
         <p style={{ fontSize: ".7rem", textAlign: "center" }}>fit details can be found in <a href="https://www.instagram.com/stories/highlights/17927917030896477/" target="_blank" rel="noreferrer noopener">Instagram story highlights</a></p>
         <Col>
           {/* TODO: Add support button <LinkDropdownButton>support me</LinkDropdownButton> */}
+          <LinkButton link="http://www.launchgood.com/competition?utm_source=external&utm_medium=influencer_ramadan_mara&utm_campaign=istanbulgiveaway&src=lg_influencer" key={123123}>win a family trip to Istanbul</LinkButton>
           {links.map((item) => <LinkButton link={item.link} key={item.id}>{item.title.toLowerCase()}{item.discount && ` | ${item.discount.toUpperCase()} to save`}{item.affiliate && <p class="tiny">*</p>}</LinkButton>)}
         </Col>
       </div>
