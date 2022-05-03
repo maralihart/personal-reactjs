@@ -55,9 +55,9 @@ export default function Links() {
         {/* <h2 className="text-center">assalamu alaiykum</h2> */}
         <Row style={{ justifyContent: "space-evenly", alignItems: "center" }}>
           <p className="text-center">collab: pr@mara.fyi</p>
-          <p style={{ background: secondary, padding: "10px"}}><a className="text-white" href="./MARA_HART_MEDIAKIT_PUBLIC.pdf" 
+          {/*<p style={{ background: secondary, padding: "10px"}}><a className="text-white" href="./MARA_HART_MEDIAKIT_PUBLIC.pdf" 
           download="MARA_HART_MEDIAKIT">
-            download media kit</a></p>
+            download media kit</a></p>*/}
         </Row>
         <p style={{ fontSize: ".7rem", textAlign: "center" }}>fit details can be found in <a href="https://www.instagram.com/stories/highlights/17927917030896477/" target="_blank" rel="noreferrer noopener">Instagram story highlights</a></p>
         <Col>
