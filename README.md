@@ -5,7 +5,16 @@ React Router 5, Create React App 4, and GSAP.
 
 ## Development
 
-Use Node 20 and npm:
+Use **Node 24.21.0 LTS** and npm 11. The local version is pinned in
+`.node-version`; `package.json` declares the supported Node and npm ranges.
+With [fnm](https://github.com/Schniz/fnm), select the project runtime first:
+
+```sh
+fnm install 24.21.0
+fnm use 24.21.0
+```
+
+Then install dependencies and run the project:
 
 ```sh
 npm ci
@@ -18,6 +27,13 @@ The OpenSSL flag supports the retained CRA 4 / webpack 4 toolchain on modern
 Node. The scoped `postcss-safe-parser` override fixes legacy PostCSS package
 exports without upgrading the toolchain. Netlify sets the Node version and
 OpenSSL flag in `netlify.toml`.
+
+Node 20 reached end of life on April 30, 2026. As of September 2026, Node 24 is
+the current LTS line, with support scheduled through April 30, 2028; Node 26
+is not yet LTS.
+See the [official Node release schedule](https://github.com/nodejs/Release#release-schedule).
+Keep `.node-version` and Netlify's `NODE_VERSION` in sync when updating patches.
+This project-level pin does not change the system-wide Node default.
 
 No API keys or environment configuration are required. Never put secrets in
 `REACT_APP_*` variables: Create React App embeds them in the public browser
