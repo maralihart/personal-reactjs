@@ -88,7 +88,7 @@ function Home() {
         </div>
         <figure className="bread-hero-photo">
           <img
-            src="/images/sandwich-loaves.webp"
+            src="/images/bread/sandwich-loaves.webp"
             alt="Three freshly baked sourdough sandwich loaves cooling on a rack"
             width="585"
             height="323"
@@ -170,7 +170,7 @@ function Home() {
           </div>
           <div className="bread-rewards-grid">
             <figure className="bread-rewards-photo" data-reveal>
-              <img src="/images/date-loaf-packaged.webp" alt="Mara's date and date syrup sourdough loaf in its labeled paper packaging" width="1000" height="750" loading="lazy" decoding="async" />
+              <img src="/images/bread/date-loaf-packaged.webp" alt="Mara's date and date syrup sourdough loaf in its labeled paper packaging" width="1000" height="750" loading="lazy" decoding="async" />
               <figcaption>A loaf to share. A reason to come back.</figcaption>
             </figure>
             <div className="bread-rewards-offers">

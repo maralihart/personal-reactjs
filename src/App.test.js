@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App';
 
-jest.mock('./components/Bread', () => () => <h1>Bakery</h1>);
-jest.mock('./components/Links', () => () => <h1>Social links</h1>);
+jest.mock('./pages/Bread', () => () => <h1>Bakery</h1>);
+jest.mock('./pages/SocialLinks', () => () => <h1>Social links</h1>);
 
 test.each([
   ['/', '/bread', 'Bakery'],

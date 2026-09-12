@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import portrait from '../../assets/profile.jpg';
-import LinksFooter from './Footer';
+import portrait from '../../assets/mara-profile.jpg';
+import AffiliateDisclosure from './AffiliateDisclosure';
 import { socialLinks, socialProfiles } from './data';
-import './Links.css';
+import './SocialLinks.css';
 
 function SocialLink({ affiliate, children, ...props }) {
   return affiliate ? (
@@ -28,7 +28,7 @@ function ProfileIcon({ platform }) {
   );
 }
 
-export default function Links() {
+export default function SocialLinks() {
   useEffect(() => {
     document.title = 'Links | Mara';
   }, []);
@@ -119,7 +119,7 @@ export default function Links() {
                 </li>
               ))}
             </ul>
-            <LinksFooter />
+            <AffiliateDisclosure />
           </section>
         </div>
       </div>

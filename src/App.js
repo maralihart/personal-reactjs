@@ -1,6 +1,6 @@
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import Bread from './components/Bread';
-import Links from './components/Links';
+import Bread from './pages/Bread';
+import SocialLinks from './pages/SocialLinks';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route exact path={['/links', '/social']}>
           <Redirect to="/social/links" />
         </Route>
-        <Route exact path="/social/links" component={Links} />
+        <Route exact path="/social/links" component={SocialLinks} />
         <Route path="/bread" component={Bread} />
         <Redirect to="/bread" />
       </Switch>

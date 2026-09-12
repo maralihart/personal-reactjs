@@ -30,7 +30,7 @@ test('home has all bakery sections and real order destinations', () => {
 test('home uses Mara’s photos and advertises both rewards', () => {
   renderBread();
   const heroImage = screen.getByRole('img', { name: 'Three freshly baked sourdough sandwich loaves cooling on a rack' });
-  expect(heroImage).toHaveAttribute('src', '/images/sandwich-loaves.webp');
+  expect(heroImage).toHaveAttribute('src', '/images/bread/sandwich-loaves.webp');
   expect(heroImage.closest('.bread-hero')).toBeInTheDocument();
   const bakes = document.getElementById('bakes');
   expect(bakes.querySelectorAll('.bread-product-media .bread-illustration')).toHaveLength(2);

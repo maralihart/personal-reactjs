@@ -8,7 +8,7 @@ export const products = [
     ingredients: 'Organic unbleached flour, water, sourdough starter (organic unbleached flour, water), and salt.',
     allergens: 'Contains wheat.',
     photo: {
-      src: '/images/sandwich-loaves.webp',
+      src: '/images/bread/sandwich-loaves.webp',
       alt: 'Three freshly baked sourdough sandwich loaves cooling on a rack',
       width: 585,
       height: 323,

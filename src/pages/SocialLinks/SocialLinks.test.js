@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom';
 import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
-import Links from './index';
+import SocialLinks from './index';
 
 function renderLinks() {
   return render(
     <MemoryRouter initialEntries={['/social/links']}>
-      <Route exact path="/social/links"><Links /></Route>
+      <Route exact path="/social/links"><SocialLinks /></Route>
     </MemoryRouter>
   );
 }

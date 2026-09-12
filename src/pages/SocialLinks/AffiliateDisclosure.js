@@ -1,4 +1,4 @@
-export default function LinksFooter() {
+export default function AffiliateDisclosure() {
   return (
     <footer className="social-footer">
       <p>
