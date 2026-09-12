@@ -1,6 +1,27 @@
 [build]
-  functions = "functions"
+  command = "npm run build"
   publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+
+[[redirects]]
+  from = "/"
+  to = "/bread"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/links"
+  to = "/social/links"
+  status = 301
+
+[[redirects]]
+  from = "/social"
+  to = "/social/links"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
