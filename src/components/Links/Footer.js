@@ -1,9 +1,11 @@
 export default function LinksFooter() {
-
   return (
-    <footer>
-      <p class="tiny" style={{ fontSize: "6pt", color: "inherit"}}>* purchases made by these links earn the creator a percentage of the purchase. thank you for your support! </p>
-      <p class="tiny" style={{ fontSize: "6pt", color: "inherit"}}>website designed & coded by <a href="https://linkedin.com/in/maralihart">mara hart</a></p>
+    <footer className="social-footer">
+      <p>
+        A little note: Amazon and Lala Hijab are affiliate links. I may earn a
+        commission when you shop through them. As an Amazon Associate I earn
+        from qualifying purchases. Thank you for supporting my work.
+      </p>
     </footer>
   );
 }

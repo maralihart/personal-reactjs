@@ -1,22 +1,20 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import Bread from './components/Bread';
 import Links from './components/Links';
-// import Fashion from './components/Fashion';
 
 function App() {
-
   return (
     <BrowserRouter>
       <Switch>
-        {/* TODO: Update routes when rest of site is built out
-        <Route exact path="/links">
-          <Links/>
+        <Route exact path="/">
+          <Redirect to="/bread" />
         </Route>
-        <Route path="/">
-          <Fashion />
-        </Route> */}
-        <Route path="/">
-          <Links/>
+        <Route exact path={['/links', '/social']}>
+          <Redirect to="/social/links" />
         </Route>
+        <Route exact path="/social/links" component={Links} />
+        <Route path="/bread" component={Bread} />
+        <Redirect to="/bread" />
       </Switch>
     </BrowserRouter>
   );

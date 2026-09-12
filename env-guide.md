@@ -1,31 +1,14 @@
-REACT_APP_TWITCH_CLIENT=
-REACT_APP_TWITCH_SECRET=
-REACT_APP_GRAPHCMS_ENDPOINT=
+# Environment
 
-use `process.env.VARIABLE-NAME`
+No environment variables or API credentials are required. Bakery and social
+content live in `src/components/Bread/content.js` and `src/components/Links`.
+The retired GraphCMS and Twitch integrations are no longer used.
 
-example of how to use graphcms api
-```
-useEffect(() => {
-    const fetchItems = async () => {
-      const { items } = await request(
-        process.env.REACT_APP_GRAPHCMS_ENDPOINT ? process.env.REACT_APP_GRAPHCMS_ENDPOINT : "",
-        `
-          { 
-            items {
-              values
-            }
-          }
-        `
-      );
-      setValue(items);
-    };
+The React 17 / Create React App 4 toolchain is retained. With Node 20, use
+`NODE_OPTIONS=--openssl-legacy-provider` when starting or building the app.
+Netlify sets this in `netlify.toml`.
+The scoped `postcss-safe-parser` override fixes the legacy PostCSS package
+exports on current Node without upgrading the CRA toolchain.
 
-    fetchItems();
-  }, []);
-```
-
-curl --location --request \
-GET 'https://api.twitch.tv/helix/search/channels?query=MaraDrinksMilk' \
---header 'client-id: wbmytr93xzw8zbg0p1izqyzzc5mbiz' \
---header 'Authorization: Bearer 2gbdx6oar67tqtcmt49t3wpcgycthx'
+Never place secrets in `REACT_APP_*` variables: Create React App embeds them in
+the public browser bundle. Local `.env` files are ignored by Git.

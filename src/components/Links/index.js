@@ -1,74 +1,128 @@
-import request from 'graphql-request';
-import { useState, useEffect } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { isMobile } from 'react-device-detect';
-import pfp from '../../assets/profile.jpg';
-import TikTokIcon from '../../assets/tiktok-logo.png';
-import InstagramIcon from '../../assets/instagram-logo.png';
-import { Instagram, TikTok, LinkButton, secondary } from '../Essentials/Essentials';
+import { useEffect } from 'react';
+import portrait from '../../assets/profile.jpg';
+import LinksFooter from './Footer';
+import { socialLinks, socialProfiles } from './data';
+import './Links.css';
+
+function SocialLink({ affiliate, children, ...props }) {
+  return affiliate ? (
+    <a {...props} target="_blank" rel="noopener noreferrer sponsored">{children}</a>
+  ) : (
+    <a {...props} target="_blank" rel="noopener noreferrer">{children}</a>
+  );
+}
+
+function ProfileIcon({ platform }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      {platform === 'instagram' ? (
+        <g fill="none" stroke="currentColor" strokeWidth="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </g>
+      ) : (
+        <path fill="currentColor" d="M14 3h3c0 2.5 1.5 4 4 4v3a8 8 0 0 1-4-1v7a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V3Z" />
+      )}
+    </svg>
+  );
+}
 
 export default function Links() {
-
-  const [links, setLinks] = useState([{ 'title': '', 'link': '', 'id': '', 'discount': '' }]);
-
   useEffect(() => {
-    const fetchLinks = async () => {
-      const { links } = await request(
-        "https://api-us-east-1.graphcms.com/v2/cknukiy6yga6w01yzfte93hr7/master",
-        `
-          {
-            links {
-              id
-              link
-              title
-              discount
-              affiliate
-            }
-          }
-        `
-      );
-      setLinks(links.reverse());
-    };    fetchLinks();
+    document.title = 'Links | Mara';
   }, []);
 
   return (
-    <>
-      <div class="buffer">
-        <Row style={{
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          margin: "20px 0 7px 0"
-        }}>
-          <a href={Instagram} target="_blank" rel="noreferrer noopener">
-            <img src={InstagramIcon} width={isMobile ? "40px" : "80px"} alt="Instagram logo" />
-          </a>
-          <img
-            className="circle"
-            src={pfp}
-            width="125px" height="125px"
-            alt="Mara drinking juice at brunch" />
-          <a href={TikTok} target="_blank" rel="noreferrer noopener">
-            <img src={TikTokIcon} width={isMobile ? "35px" : "75px"} alt="Tiktok logo" />
-          </a>
-        </Row>
-        <h1 className="text-center" style={{ fontFamily: "Source Sans Pro", textTransform: "uppercase" }}>mara</h1>
-        {/* <h2 className="text-center">assalamu alaiykum</h2> */}
-        <Row style={{ justifyContent: "space-evenly", alignItems: "center" }}>
-          <p className="text-center">collab: pr@mara.fyi</p>
-          {/*<p style={{ background: secondary, padding: "10px"}}><a className="text-white" href="./MARA_HART_MEDIAKIT_PUBLIC.pdf" 
-          download="MARA_HART_MEDIAKIT">
-            download media kit</a></p>*/}
-        </Row>
-        <p style={{ fontSize: ".7rem", textAlign: "center" }}>fit details can be found in <a href="https://www.instagram.com/stories/highlights/17927917030896477/" target="_blank" rel="noreferrer noopener">Instagram story highlights</a></p>
-        <Col>
-          {/* TODO: Add support button <LinkDropdownButton>support me</LinkDropdownButton> */}
-          {links.map((item) => <LinkButton link={item.link} key={item.id}>{item.title.toLowerCase()}{item.discount && ` | ${item.discount.toUpperCase()} to save`}{item.affiliate && <p class="tiny">*</p>}</LinkButton>)}
-        </Col>
+    <main className="social-page">
+      <div className="container social-shell">
+        <header className="social-navigation">
+          <span className="social-wordmark">Mara</span>
+          <span className="eyebrow">The link collection</span>
+        </header>
+
+        <div className="social-layout">
+          <header className="social-intro">
+            <img
+              className="social-portrait"
+              src={portrait}
+              width="160"
+              height="160"
+              alt="Mara drinking juice at brunch"
+            />
+            <p className="eyebrow social-eyebrow">A few of my favorite things</p>
+            <h1 className="social-title">Hi, I’m Mara.</h1>
+            <p className="social-description">
+              Welcome to my little corner of the internet. Here are a few places
+              to find me, and a few things I love.
+            </p>
+            <p className="social-signature">Thanks for being here.</p>
+            <nav className="social-profile-links" aria-label="Social profiles">
+              {socialProfiles.map((profile) => (
+                <SocialLink
+                  key={profile.id}
+                  className="social-profile-icon"
+                  href={profile.href}
+                  aria-label={profile.title}
+                  aria-describedby="social-new-tab"
+                  title={profile.description}
+                >
+                  <ProfileIcon platform={profile.id} />
+                </SocialLink>
+              ))}
+            </nav>
+            <div className="social-contact">
+              <p className="eyebrow">Collaborations & inquiries</p>
+              <a className="text-link" href="mailto:pr@mara.fyi">pr@mara.fyi</a>
+            </div>
+          </header>
+
+          <section className="social-collection" aria-labelledby="social-links-heading">
+            <div className="social-collection-heading">
+              <h2 id="social-links-heading">The good things, gathered.</h2>
+              <p id="social-new-tab">Links open in a new tab.</p>
+            </div>
+            <ul className="social-list">
+              {socialLinks.map((item, index) => (
+                <li key={item.id}>
+                  <SocialLink
+                    className="social-card"
+                    href={item.href}
+                    affiliate={item.affiliate}
+                    aria-labelledby={`social-${item.id}-title`}
+                    aria-describedby={`social-${item.id}-description social-new-tab`}
+                  >
+                    <span className="social-card-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div className="social-card-copy">
+                      <h3 id={`social-${item.id}-title`}>{item.title}</h3>
+                      <p id={`social-${item.id}-description`}>
+                        {item.description}
+                        {item.affiliate && <span className="social-affiliate-label">Affiliate link</span>}
+                      </p>
+                    </div>
+                    <svg
+                      className="social-arrow"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M6 18 18 6M6 6h12v12" />
+                    </svg>
+                  </SocialLink>
+                </li>
+              ))}
+            </ul>
+            <LinksFooter />
+          </section>
+        </div>
       </div>
-      <footer>
-        <p class="tiny" style={{ fontSize: "6pt", color: "inherit"}}>* purchases made by these links earn the creator a percentage of the purchase. thank you for your support! </p>
-        <p class="tiny" style={{ fontSize: "6pt", color: "inherit"}}>website designed & coded by <a href="https://linkedin.com/in/maralihart">mara hart</a></p>
-      </footer>
-    </>
+    </main>
   );
 }
